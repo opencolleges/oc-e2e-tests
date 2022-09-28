@@ -1,7 +1,7 @@
-describe("Login", () => {
-  it("What", () => {
+describe("Login and navigate to Profile page", () => {
+  it("Digital caveman approach", () => {
     
-    https://docs.cypress.io/guides/references/error-messages#Uncaught-exceptions-from-your-application
+    // https://docs.cypress.io/guides/references/error-messages#Uncaught-exceptions-from-your-application
     Cypress.on('uncaught:exception', (err, runnable) => {
       return false;
     });
@@ -15,6 +15,8 @@ describe("Login", () => {
     cy.get("input[name='username']").type("mich.rodriguezsol@hotmail.com");
     cy.get("input[name='password']").type("Y[JWcyF27:jef:Y");
     cy.get("button[type='submit']").click();
+    // Assert: we have reached the dashboard
+    cy.get("div.moduleTracker-container").should("be.visible");
 
     // Action: Click hamburger icon on the top left 
     cy.get("#overlayOpenMob").click();
