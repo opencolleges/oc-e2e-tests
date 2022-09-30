@@ -3,4 +3,4 @@
 Adding a Readme file just to see if two remotes works well.
 
 
-Can I push to both?
+Make changes to both by pushing to one
