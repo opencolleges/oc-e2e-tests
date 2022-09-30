@@ -2,5 +2,4 @@
 
 Adding a Readme file just to see if two remotes works well.
 
-
-Make changes to both by pushing to one
+Well it looks like it works well!!!
