@@ -20,19 +20,6 @@ describe("Login and navigate to Profile page", () => {
     // Assert: we have reached the dashboard
     cy.get("div.moduleTracker-container").should("be.visible");
 
-    // // Action: Click hamburger icon on the top left 
-    // cy.get("#overlayOpenMob").click();
-    
-    // // Action: Click 'My Account' button
-    // cy.get("div.support-top-level-title")
-    //   .contains("My Account")
-    //   .click();
-
-    // // Action: Click 'My Profile' button
-    // cy.get("div.os-md-menu-list")
-    // .contains("My Profile")
-    // .click();
-
     // Action: Click 'My Profile' button
     cy.get("#my_profile_link").parent().click();
 
@@ -48,5 +35,22 @@ describe("Login and navigate to Profile page", () => {
 
   });
 
+  it("Not Digital caveman approach", () => {
+    cy.login();
 
+    // Action: Click hamburger icon on the top left
+    cy.get("#overlayOpenMob").click();
+
+    // Action: Click 'My Account' button
+    cy.get("div.support-top-level-title")
+      .contains("My Account")
+      .click();
+
+    // Action: Click 'My Profile' button
+    cy.get("div.os-md-menu-list")
+      .contains("My Profile")
+      .click();
+    // Assert: We have successfully reached Profile page
+    cy.url().should('include', 'my-profile');
+  })
 })
