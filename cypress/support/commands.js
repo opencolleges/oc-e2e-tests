@@ -27,8 +27,8 @@ Cypress.Commands.add("login", (email, password) => {
 	cy.get("button[type='submit']").should("contain", "Log In");
 
 	// Action: Fill form and submit
-	cy.get("input[name='username']").type(credentials.user_mich);
-	cy.get("input[name='password']").type(Cypress.env("password_mich"));
+	cy.get("input[name='username']").type(email);
+	cy.get("input[name='password']").type(password);
 	cy.get("button[type='submit']").click();
 	// Assert: we have reached the dashboard
 	cy.get("div.moduleTracker-container", { timeout: 10000 }).should("be.visible");
@@ -38,7 +38,7 @@ Cypress.Commands.add("login", (email, password) => {
 Cypress.Commands.add("goToProfilePage", () => {
 
 	// Start with login page
-	cy.login();
+	cy.login(credentials.user_mich,Cypress.env("password_mich"));
 
 	// Action: Click 'My Profile' button
 	cy.get("#my_profile_link").parent().click();
