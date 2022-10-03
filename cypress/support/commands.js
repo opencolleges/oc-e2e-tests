@@ -11,7 +11,7 @@
 //
 // -- This is a parent command --
 
-import user from '../fixtures/example.json'
+import credentials from '../fixtures/login_credentials.json'
 Cypress.Commands.add("login", (email, password) => {
 	// https://docs.cypress.io/guides/references/error-messages#Uncaught-exceptions-from-your-application
 	Cypress.on('uncaught:exception', (err, runnable) => {
@@ -22,13 +22,13 @@ Cypress.Commands.add("login", (email, password) => {
 	cy.viewport(1250, 800);
 
 	// Navigate: Login page on UAT server
-	cy.visit(user.uat_server);
+	cy.visit(credentials.server_uat );
 	// Assert: 'Log in' button in the page
 	cy.get("button[type='submit']").should("contain", "Log In");
 
 	// Action: Fill form and submit
-	cy.get("input[name='username']").type("mich.rodriguezsol@hotmail.com");
-	cy.get("input[name='password']").type("Y[JWcyF27:jef:Y");
+	cy.get("input[name='username']").type(credentials.user_mich);
+	cy.get("input[name='password']").type(Cypress.env("password_mich"));
 	cy.get("button[type='submit']").click();
 	// Assert: we have reached the dashboard
 	cy.get("div.moduleTracker-container", { timeout: 10000 }).should("be.visible");
@@ -38,7 +38,7 @@ Cypress.Commands.add("login", (email, password) => {
 Cypress.Commands.add("goToProfilePage", () => {
 
 	// Start with login page
-	Cypress.login();
+	cy.login();
 
 	// Action: Click 'My Profile' button
 	cy.get("#my_profile_link").parent().click();
