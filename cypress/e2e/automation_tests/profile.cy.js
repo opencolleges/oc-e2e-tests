@@ -32,9 +32,9 @@ describe("Showcase two different approaches", () => {
     // Action: Click edit button
     cy.get("#edit-button-1").click();
     // Assert: Form is in edit mode
-    cy.get("#profile-select-Assessment\\ Feedback").should("be.visible");
+    cy.get("#profile-select-Assessment-Feedback").should("be.visible");
     // Action: Select Audio
-    cy.get("#profile-select-Assessment\\ Feedback").select("Audio");
+    cy.get("#profile-select-Assessment-Feedback").select("Audio");
     // Action: Click save
     cy.get("#save-button-1").click();
     // Assert: Value has been changed
@@ -44,9 +44,9 @@ describe("Showcase two different approaches", () => {
     // Action: Click edit button
     cy.get("#edit-button-1").click();
     // Assert: Form is in edit mode
-    cy.get("#profile-select-Assessment\\ Feedback").should("be.visible");
+    cy.get("#profile-select-Assessment-Feedback").should("be.visible");
     // Action: Select 'No preference'
-    cy.get("#profile-select-Assessment\\ Feedback").select("No Preference");
+    cy.get("#profile-select-Assessment-Feedback").select("No Preference");
     // Action: Click save
     cy.get("#save-button-1").click();
     // Assert: Value has been changed
@@ -63,9 +63,9 @@ describe("Showcase two different approaches", () => {
     // Action: Click edit button
     cy.get("#edit-button-1").click();
     // Assert: Form is in edit mode
-    cy.get("#profile-select-Assessment\\ Feedback").should("be.visible");
+    cy.get("#profile-select-Assessment-Feedback").should("be.visible");
     // Action: Select Audio
-    cy.get("#profile-select-Assessment\\ Feedback").select("Audio");
+    cy.get("#profile-select-Assessment-Feedback").select("Audio");
     // Action: Click save
     cy.get("#save-button-1").click();
     // Assert: Value has been changed
@@ -75,9 +75,9 @@ describe("Showcase two different approaches", () => {
     // Action: Click edit button
     cy.get("#edit-button-1").click();
     // Assert: Form is in edit mode
-    cy.get("#profile-select-Assessment\\ Feedback").should("be.visible");
+    cy.get("#profile-select-Assessment-Feedback").should("be.visible");
     // Action: Select 'No preference'
-    cy.get("#profile-select-Assessment\\ Feedback").select("No Preference");
+    cy.get("#profile-select-Assessment-Feedback").select("No Preference");
     // Action: Click save
     cy.get("#save-button-1").click();
     // Assert: Value has been changed
