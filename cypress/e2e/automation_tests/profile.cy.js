@@ -18,13 +18,13 @@ describe("Showcase two different approaches", () => {
     cy.get("input[name='password']").type("Y[JWcyF27:jef:Y");
     cy.get("button[type='submit']").click();
     // Assert: we have reached the dashboard
-    cy.get("div.moduleTracker-container").should("be.visible");
+    cy.get("div.moduleTracker-container", { timeout: 10000 }).should("be.visible");
 
     // Action: Click 'My Profile' button
     cy.get("#my_profile_link").parent().click();
 
     // Assert: We are in Profile page
-    cy.url().should("include", "my-profile");
+    cy.url().should("include", "my-profile", { timeout: 10000 });
 
     /* Switch from 'No preference' to 'Audio' */
     // Assert: Current preference is set to 'No preference'
