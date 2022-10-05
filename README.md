@@ -1,5 +1,7 @@
 # Setup Cypress testing suite on your machine
 
+## Note: The following guide is github specific. If You are reading this on Bitbucket please [head over to github](https://github.com/opencolleges/oc-e2e-tests) before you start the setup.
+
 ## Pre-requisites
 ### You must
 - [x] have access to the [repository on github](https://github.com/opencolleges/oc-e2e-tests).
@@ -10,20 +12,23 @@
 ## Steps to follow
 
 - ### Clone the repository
+	Clone the repository in location of your choice
   ```
   git clone git@github.com:Open-Colleges/OCA.git
   ```
 
-- ### Install node modules
+- ### Installing node modules
+	Switch to the root directory and install the dependencies
 	```
+	cd oc-e2e-tests/
 	npm install
 	```
 
 - ### Create an environment variable file
-	This creates an environment variable file named `cypress.env.json` that contains all the passwords to the users specified in [login_credentials.json](cypress/fixtures/login_credentials.json). Contact one of the developers if you do not have the password.
+	The following command creates an environment variable file named `cypress.env.json` (gitignored) that would contain the passwords to the users specified in [login_credentials.json](cypress/fixtures/login_credentials.json). Contact one of the developers if you do not have the password.
 	```
 	echo '{
-		"password_mich": "<password for the user Mich>"
+	"password_mich": "<password for the user Mich>"
 	}' > cypress.env.json
 	```
 
@@ -34,7 +39,7 @@
   ```
 
 ***
-**You should now be able to run Cypress on your local machine by doing the following**.
+**You should now be able to run Cypress on your local machine by doing the following**
 ```
 npm run cypress
 ```
