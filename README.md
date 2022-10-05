@@ -1,6 +1,6 @@
 # Setup Cypress testing suite on your machine
 
-**Note**: The following steps assumes that you are reading this on Github. If You are reading this on Bitbucket please [head over to github](https://github.com/opencolleges/oc-e2e-tests) before you start the setup.
+**Note**: The following steps assumes that you are reading this on Github. If you are reading this on Bitbucket, please [head over to github](https://github.com/opencolleges/oc-e2e-tests) before you start the setup.
 
 ## Pre-requisites
 ### You must
