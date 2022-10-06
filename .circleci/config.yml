@@ -17,3 +17,4 @@ workflows:
           record: true
           parallel: true
           start: 'npm run cypress'
+          store_artifacts: true
