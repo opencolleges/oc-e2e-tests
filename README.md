@@ -36,7 +36,8 @@
 - ### [Optional] Add second remote to this repository.
 	This is an optional step that needs to be followed only if you contributing code to this repository. Ignore this step you are setting Cypress just to test locally.
   ```bash
-  git remote set-url --add --push origin git@bitbucket.org:opencollegeseduau/oc-e2e-tests.git 
+  git remote set-url --add --push origin git@bitbucket.org:opencollegeseduau/oc-e2e-tests.git
+  git remote set-url --add --push origin git@github.com:opencolleges/oc-e2e-tests.git
   ```
 
 ***
