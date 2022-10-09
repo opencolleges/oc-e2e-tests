@@ -4,6 +4,7 @@
 
 ## Pre-requisites
 ### You must
+- [x] have Node developement environment (> 14.x) setup on your machine.
 - [x] have access to the [repository on github](https://github.com/opencolleges/oc-e2e-tests).
 - [x] have [setup your machine's SSH key to your GitHub account](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account).
 
