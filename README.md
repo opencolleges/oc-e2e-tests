@@ -15,7 +15,7 @@
 - ### Clone the repository
 	Clone the repository in location of your choice
   ```
-  git clone git@github.com:Open-Colleges/OCA.git
+  git clone git@github.com:opencolleges/oc-e2e-tests.git
   ```
 
 - ### Installing node modules
