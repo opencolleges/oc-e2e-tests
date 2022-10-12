@@ -15,7 +15,7 @@ workflows:
             - cypress/install
           group: "all tests"
           record: true
-          parallel: true
+          parallel: false
           start: 'npm run cypress'
           store_artifacts: true
           
