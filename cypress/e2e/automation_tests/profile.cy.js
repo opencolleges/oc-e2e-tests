@@ -6,7 +6,7 @@ describe("Student profile page", () => {
 
     /* Switch from 'No preference' to 'Audio' */
     // Assert: Current preference is set to 'No preference'
-    cy.get("#detail_text-Assessment-Feedback", {wait: 30000}).should("contain" ,"No Preference");
+    cy.get("#detail_text-Assessment-Feedback", { timeout: 10000 }).should("contain" ,"No Preference");
     // Action: Click edit button
     cy.get("#edit-button-1").click();
     // Assert: Form is in edit mode
