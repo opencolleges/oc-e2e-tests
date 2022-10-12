@@ -7,7 +7,7 @@ Cypress.Commands.add("login", (email, password) => {
 	});
 
 	// Set the viewport
-	cy.viewport(1250, 800);
+	cy.viewport(1250, 1200);
 
 	// Navigate: Login page on UAT server
 	cy.visit(credentials.server_uat );
