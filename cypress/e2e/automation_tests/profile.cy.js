@@ -1,33 +1,41 @@
+import credentials from "../../fixtures/login_credentials.json";
 
 describe("Student profile page", () => {
 
-  it("Assessment feedback", () => {
+  it("About me form", () => {
     cy.goToProfilePage();
 
-    /* Switch from 'No preference' to 'Audio' */
-    // Assert: Current preference is set to 'No preference'
-    cy.get("#detail_text-Assessment-Feedback", { timeout: 10000 }).should("contain" ,"No Preference");
+    /* Change name */
+    // Assert: Original name
+    cy.get("#about-me-name")
+      .should("contain", credentials.user_mich.name);
     // Action: Click edit button
-    cy.get("#edit-button-1").click();
+    cy.get("#about-me-edit").click();
     // Assert: Form is in edit mode
-    cy.get("#profile-select-Assessment-Feedback").should("be.visible");
-    // Action: Select Audio
-    cy.get("#profile-select-Assessment-Feedback").select("Audio");
+    cy.get("#display_name").should("be.visible");
+    // Action: Change name
+    cy.get("#display_name")
+    .clear()
+    .type(credentials.user_mich.name_change);
     // Action: Click save
-    cy.get("#save-button-1").click();
-    // Assert: Value has been changed
-    cy.get("#detail_text-Assessment-Feedback").should("contain" ,"Audio");
+    cy.get("#about-me-save").click();
+    // Assert: Name has been changed
+    cy.get("#about-me-name")
+      .should("contain", credentials.user_mich.name_change);
 
     /* Revert to original value */
     // Action: Click edit button
-    cy.get("#edit-button-1").click();
+    cy.get("#about-me-edit").click();
     // Assert: Form is in edit mode
-    cy.get("#profile-select-Assessment-Feedback").should("be.visible");
-    // Action: Select 'No preference'
-    cy.get("#profile-select-Assessment-Feedback").select("No Preference");
+    cy.get("#display_name").should("be.visible");
+    // Action: Type original name
+    cy.get("#display_name")
+    .clear()
+    .type(credentials.user_mich.name);
     // Action: Click save
-    cy.get("#save-button-1").click();
-    // Assert: Value has been changed
-    cy.get("#detail_text-Assessment-Feedback").should("contain" ,"No Preference");
-  })
-}) 
+    cy.get("#about-me-save").click();
+    // Assert: Name has been reverted
+    cy.get("#about-me-name")
+      .should("contain", credentials.user_mich.name);
+  });
+}) ;
