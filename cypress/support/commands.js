@@ -26,7 +26,7 @@ Cypress.Commands.add("login", (email, password) => {
 Cypress.Commands.add("goToProfilePage", () => {
 
 	// Start with login page
-	cy.login(credentials.user_mich, Cypress.env("password_mich"));
+	cy.login(credentials.user_mich.username, Cypress.env("password_mich"));
 
 	// Action: Click 'My Profile' button
 	cy.get("#my_profile_link").parent().click();
