@@ -16,7 +16,7 @@ describe("SWS-Quiz", () => {
 
       // Assert: Start quiz exists
       // TODO: better targets
-      cy.get("div.os-cursor-pointer", {timeout: 10000})
+      cy.get("div.os-cursor-pointer", { timeout: 20000 })
         .should("contain", "Quiz")
         .should("be.visible")
     })
