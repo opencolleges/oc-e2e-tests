@@ -12,9 +12,9 @@ describe("Student profile page", () => {
     // Action: Click edit button
     cy.get("#about-me-edit").click();
     // Assert: Form is in edit mode
-    cy.get("#display_name").should("be.visible");
+    cy.get("#about-me-display-name").should("be.visible");
     // Action: Change name
-    cy.get("#display_name")
+    cy.get("#about-me-display-name")
     .clear()
     .type(credentials.user_mich.name_change);
     // Action: Click save
@@ -27,9 +27,9 @@ describe("Student profile page", () => {
     // Action: Click edit button
     cy.get("#about-me-edit").click();
     // Assert: Form is in edit mode
-    cy.get("#display_name").should("be.visible");
+    cy.get("#about-me-display-name").should("be.visible");
     // Action: Type original name
-    cy.get("#display_name")
+    cy.get("#about-me-display-name")
     .clear()
     .type(credentials.user_mich.name);
     // Action: Click save
