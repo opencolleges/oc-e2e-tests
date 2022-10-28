@@ -1,15 +1,15 @@
 import credentials from "../../fixtures/login_credentials.json";
 
 describe("Student grades page", () => {
-    it("Grades table ", () => {
-        cy.login(credentials.user_mich.username, Cypress.env("password_mich"));
+		it("Grades table ", () => {
+				cy.login(credentials.user_mich.username, Cypress.env("password_mich"));
 
-        // Action: Click top right button to open the menu
-        cy.get("#my_profile_link")
+				// Action: Click top right button to open the menu
+				cy.get("#my_profile_link")
 					.parent()
 					.click();
-        // Action: Click on 'My Grades' menu item
-        cy.get('#student_grade_link').click();
+				// Action: Click on 'My Grades' menu item
+				cy.get('#student_grade_link').click();
 
 				// Assert: We have successfully reached 'My grades' page
 				cy.url().should("include", "student-grade");
@@ -28,5 +28,5 @@ describe("Student grades page", () => {
 				const dateRegExObj = new RegExp("^\\d{2}\/\\d{2}\/\\d{4}$","g")
 				cy.get('#grades_dt_row_id10 > .grade-date').contains(dateRegExObj);
 
-    });
+		});
 });
