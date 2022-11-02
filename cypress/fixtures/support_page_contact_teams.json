@@ -1,0 +1,19 @@
+[
+    {
+      "iconText": "Online Tutorials",
+      "pageTitleDOM": ".article-page-title > h1",
+      "urlString": "#/support-article/what-are-online-tutorials-and-how-can-they-help-you",
+      "pageTitle": "What are online tutorials and how can they help you?"
+    },
+    {
+      "iconText": "Student Support",
+      "pageTitleDOM": ".page-main-title > h1",
+      "urlString": "#/ask-for-support",
+      "pageTitle": "Student Support"
+    },{
+      "iconText": "Academic Support",
+      "pageTitleDOM": ".page-main-title > h1",
+      "urlString": "#/message-centre?tab=contacts&section=trainer",
+      "pageTitle": "Message Centre"
+    }
+]
