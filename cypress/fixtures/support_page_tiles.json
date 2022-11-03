@@ -1,0 +1,44 @@
+[
+    {
+      "id": "getting-started",
+      "iconText": "Getting Started",
+      "urlString": "#/support/getting-started",
+      "pageTitle": "Getting Started"
+    },
+    {
+      "id": "my-profile-enrolment",
+      "iconText": "My Profile & Enrolment",
+      "urlString": "#/support/my-profile-enrolment",
+      "pageTitle": "Profile & Enrolment"
+    },{
+      "id": "study-tips-and-resources",
+      "iconText": "Study Tips & Resources",
+      "urlString": "#/support/study-tips-and-resources",
+      "pageTitle": "Study Tips & Resources"
+    },{
+      "id": "assessments",
+      "iconText": "Assessment",
+      "urlString": "#/support/assessments",
+      "pageTitle": "Assessments"
+    },{
+      "id": "structured-workplace-learning",
+      "iconText": "Structured Workplace Learning",
+      "urlString": "#/support/structured-workplace-learning",
+      "pageTitle": "Structured Workplace Learning"
+    },{
+      "id": "study-buddy",
+      "iconText": "Study Buddy",
+      "urlString": "#/support/study-buddy",
+      "pageTitle": "Study Buddy"
+    },{
+      "id": "policies-and-procedures",
+      "iconText": "Policies & Procedures",
+      "urlString": "#/support/policies-and-procedures",
+      "pageTitle": "Policies & Procedures"
+    },{
+      "id": "community-forums",
+      "iconText": "Community",
+      "urlString": "#/support/community-forums",
+      "pageTitle": "Community"
+    }
+  ]
