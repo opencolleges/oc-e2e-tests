@@ -7,8 +7,12 @@ orbs:
 workflows:
   build:
     jobs:
-      - Cypress Tests:
+      - cypress/install:
           build: 'npm install' 
+      # record Cypress tests on the Dashboard
+      - cypress/run:
+          requires:
+            - cypress/install
           group: "all tests"
           record: true
           parallel: false
