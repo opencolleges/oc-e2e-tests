@@ -11,7 +11,7 @@ describe("SWS-Extension", () => {
 	cy.viewport(1250, 1200);
 
 	// Navigate: Login page on UAT server
-	cy.visit(credentials.server_uat);
+	cy.visit(credentials.server_st2);
 	// Assert: 'Log in' button in the page
 	cy.get("button[type='submit']").should("contain", "Log In");
 
