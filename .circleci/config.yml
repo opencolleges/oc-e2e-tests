@@ -16,6 +16,5 @@ workflows:
           group: "all tests"
           record: true
           parallel: false
-          start: 'npm run cypress'
           store_artifacts: true
           
